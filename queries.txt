@@ -1,0 +1,27 @@
+TYPES
+-----
+{
+  __schema {
+    types {
+      name,
+      kind
+    }
+  }
+}
+
+
+Fields
+------
+{
+  __type(name: "ProductType") {
+    name
+    fields {
+      name
+      type {
+        ofType {
+          name
+        }
+      }
+    }
+  }
+}
