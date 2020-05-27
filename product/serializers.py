@@ -23,7 +23,8 @@ class ProductSerializerV2(serializers.ModelSerializer):
         fields = ['title', 'mrp', 'price', 'description', 'reviews']
 
     def get_reviews(self, object):
-        return reverse('product_reviews_v2', kwargs={'product_id': object.id})
+        request = self.context.get('request')
+        return request.build_absolute_uri(reverse('product_reviews_v2', kwargs={'product_id': object.id}))
 
 
 class ProductSerializerV3(serializers.ModelSerializer):
