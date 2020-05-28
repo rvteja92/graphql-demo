@@ -66,6 +66,6 @@ class Query(object):
         review_id = kwargs.get('id')
 
         if review_id is not None:
-            return Review.objects.get(id=review_id + 5)
+            return Review.objects.get(id=review_id)
 
         return None
