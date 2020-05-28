@@ -1,6 +1,6 @@
 import graphene
 
-from amazeOn.schema import Query
+from amazeOn.schema import Query, ReviewMutation
 
 
 class Query(Query, graphene.ObjectType):
@@ -8,4 +8,4 @@ class Query(Query, graphene.ObjectType):
     # as we begin to add more apps to our project
     pass
 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(query=Query, mutation=ReviewMutation)

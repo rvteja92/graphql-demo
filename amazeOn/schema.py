@@ -5,7 +5,8 @@ from graphene_django.types import DjangoObjectType
 
 from product.models import Product
 from review.models import Review
-
+from review.schema import ReviewType
+from review.forms import UpdateReviewMutation
 
 class ProductType(DjangoObjectType):
     delayed_field = graphene.String()
@@ -18,9 +19,8 @@ class ProductType(DjangoObjectType):
         model = Product
 
 
-class ReviewType(DjangoObjectType):
-    class Meta:
-        model = Review
+class ReviewMutation(graphene.ObjectType):
+    update_review = UpdateReviewMutation.Field()
 
 
 class Query(object):
