@@ -10,7 +10,7 @@ graphene-django==2.7.1
 graphql-core==2.2.1
 graphql-relay==2.0.1
 ipdb==0.13.2
-ipython==7.11.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.16.0
 parso==0.6.0
